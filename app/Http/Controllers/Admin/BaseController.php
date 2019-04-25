@@ -1,0 +1,15 @@
+<?php
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+
+class BaseController extends Controller {
+  public function __construct() {
+    parent::__construct();
+    $this->isLogin();
+  }
+
+  protected function isLogin() {
+    return true;
+  }
+}
