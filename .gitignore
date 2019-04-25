@@ -12,3 +12,4 @@ yarn-error.log
 .idea/*
 storage/framework/*
 storage/framework/sessions/*
+vendor/*
