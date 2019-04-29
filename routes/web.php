@@ -21,3 +21,9 @@ Route::get('/admin/index', 'Admin\IndexController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/triangularhelixarray/{loop_times?}', 'HomeController@triangularHelixArray')->where('loop_times', '\d+');
+Route::get('/home/triangularhelixarray1/{loop_times?}', 'HomeController@triangularHelixArray1')->where('loop_times', '\d+');
+Route::get('/home/triangularhelixarray2/{loop_times?}', 'HomeController@triangularHelixArray2')->where('loop_times', '\d+');
+Route::get('/home/triangularhelixarray3/{loop_times?}', 'HomeController@triangularHelixArray3')->where('loop_times', '\d+');
+
+
