@@ -29,6 +29,5 @@ Route::get('/home/triangularhelixarray3/{loop_times?}', 'HomeController@triangul
 //web
 Route::namespace('Web')->group(function () {
     Route::get('/', 'IndexController@index');
-    Route::match(['get', 'post'],'/advise', 'IndexController@advise');
-
+    Route::match(['get', 'post'], '/advise', 'IndexController@advise');
 });

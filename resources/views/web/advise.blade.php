@@ -5,7 +5,8 @@
         <div class="row">
             @include('web.left')
             <div class="col-sm-9">
-                <form action="" class="form-horizontal" role="form">
+                <form action="" class="form-horizontal" role="form" method="post" id="form">
+                    @csrf
                     <div class="form-group">
                         <label class="col-sm-2 control-label">姓名</label>
                         <div class="col-sm-10">
@@ -15,13 +16,14 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">联系方式</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="" placeholder="电话/邮箱/QQ/微信" required>
+                            <input type="text" class="form-control" name="method" placeholder="电话/邮箱/QQ/微信" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">内容</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control limit-words" data-max="200" name="content" rows="3" required></textarea>
+                            <textarea class="form-control limit-words" data-max="200" name="content" rows="3"
+                                      required></textarea>
                             <span class="help-block">0/200</span>
                         </div>
                     </div>
@@ -35,4 +37,19 @@
         </div>
     </div>
     <script type="text/javascript" src="{{ config('view.paths.js')}}/web.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#form").submit(function () {
+                var _this = this;
+                $.ajax({
+                    type: 'post',
+                    data: $(_this).serializeArray(),
+                    success: function (res) {
+                        alert(res.msg);
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
 @endsection

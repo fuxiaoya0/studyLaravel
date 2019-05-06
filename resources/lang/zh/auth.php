@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => '证书不匹配',
+    'failed'   => '证书不匹配',
     'throttle' => '登录尝试次数太多，请在 :seconds 秒后重试。',
 
 ];
