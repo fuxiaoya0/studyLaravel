@@ -15,6 +15,7 @@ return [
 
     'paths' => [
         resource_path('views'),
+        'js' => str_replace(base_path(), '..', resource_path('js')),
     ],
 
     /*
