@@ -18,14 +18,12 @@ class IndexController extends BaseController {
      * */
     public function advise(Request $request) {
         if ($request->isMethod('post')) {
-            echo "123";
-            die;
-            $this->advisePost();
+            return $this->advisePost();
         }
         return view('web.advise');
     }
 
     protected function advisePost() {
-
+        return response()->json(['name' => 'shawn']);
     }
 }
