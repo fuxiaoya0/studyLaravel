@@ -10,4 +10,5 @@
     </div>
 </div>
 <script src="{{ config('view.paths.js')}}/web.js"></script>
+@include('web.footer')
 @endsection

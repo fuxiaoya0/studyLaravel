@@ -31,3 +31,8 @@ Route::namespace('Web')->group(function () {
     Route::get('/', 'IndexController@index');
     Route::match(['get', 'post'], '/advise', 'IndexController@advise');
 });
+
+//swoole
+Route::namespace('Swoole')->group(function () {
+    Route::any('/server', 'ServerController@index');
+});
