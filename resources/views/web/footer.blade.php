@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <p>
-                    <a href="{{ url("/advise")}}">说点啥呢</a>
+                    <a href="{{ url("/advise")}}">{{ __('system.i_want_say') }}</a>
                 </p>
             </div>
         </div>
