@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class IndexController extends BaseController {
     public function index() {
-//        dd(resource_path('views'));
         return view('web.index');
     }
 
