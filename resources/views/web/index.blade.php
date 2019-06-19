@@ -25,5 +25,8 @@
         </tr>
         </tbody>
     </table>
+    <div class="time">
+
+    </div>
     <script src="{{ config('view.paths.js')}}/web.js"></script>
 @endsection
